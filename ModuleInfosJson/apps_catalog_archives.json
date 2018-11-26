@@ -10,7 +10,7 @@
   "license":			"GPL 2 - MIT",
   "tag":			    "catalog, archive",
   "install":            "includes/ClicShopping/Apps/Catalog/",
-  "module_directory":   "",
+  "module_directory":   "Products",
   "apps_name":          "Archive",
   "type_module":      "Fixe",
   "dependance":       "",
