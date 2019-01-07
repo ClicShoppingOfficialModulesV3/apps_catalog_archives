@@ -19,3 +19,16 @@ Install :
 http://monsite/myAdmin/index.php?A&Catalog\Archive
 
 
+All informations about the CliCshopping
+
+ Community : https://www.clicshopping.org
+
+ Software : https://github.com/ClicShopping
+
+ Official add on : https://github.com/ClicShoppingOfficialModulesV3
+
+ Community add on : https://github.com/ClicShoppingV3Community
+
+ trademark License info : https://www.clicshopping.org/forum/trademark/ 
+
+
