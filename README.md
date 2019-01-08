@@ -19,7 +19,7 @@ Install :
 http://monsite/myAdmin/index.php?A&Catalog\Archive
 
 
-All informations about the CliCshopping
+All informations about the ClicShopping
 
  Community : https://www.clicshopping.org
 
