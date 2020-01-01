@@ -9,7 +9,6 @@
    *
    */
 
-
   namespace ClicShopping\Apps\Catalog\Archive\Sites\ClicShoppingAdmin\Pages\Home\Actions\Archive;
 
   use ClicShopping\OM\Registry;
@@ -23,7 +22,6 @@
 
       if (isset($_POST['selected'])) {
         foreach ($_POST['selected'] as $id) {
-
           $Qupdate = $CLICSHOPPING_Archive->db->prepare('update :table_products
                                                   set products_archive = :products_archive
                                                   where products_id = :products_id
