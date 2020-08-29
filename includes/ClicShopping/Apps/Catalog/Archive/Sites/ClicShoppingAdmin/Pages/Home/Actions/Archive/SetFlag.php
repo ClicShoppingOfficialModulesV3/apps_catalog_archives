@@ -41,7 +41,7 @@
      *
      * @param string products_id, archive
      * @return string status on or off
-     * @access public
+     *
      *
      */
     Private static function getProductArchiveStatus($products_id, $archive)
