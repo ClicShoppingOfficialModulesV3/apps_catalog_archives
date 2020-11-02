@@ -15,10 +15,8 @@
 
   class Uninstall extends \ClicShopping\OM\PagesActionsAbstract
   {
-
     public function execute()
     {
-
       $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
       $CLICSHOPPING_Archive = Registry::get('Archive');
 
@@ -26,7 +24,7 @@
       $m = Registry::get('ArchiveAdminConfig' . $current_module);
       $m->uninstall();
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Archive->getDef('alert_module_uninstall_success'), 'success', 'Archive');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Archive->getDef('alert_module_uninstall_success'), 'success');
 
       $CLICSHOPPING_Archive->redirect('Configure&module=' . $current_module);
     }

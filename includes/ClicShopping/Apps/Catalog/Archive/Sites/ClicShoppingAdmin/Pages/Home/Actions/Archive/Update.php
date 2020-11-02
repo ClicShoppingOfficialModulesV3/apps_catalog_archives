@@ -9,7 +9,6 @@
    *
    */
 
-
   namespace ClicShopping\Apps\Catalog\Archive\Sites\ClicShoppingAdmin\Pages\Home\Actions\Archive;
 
   use ClicShopping\OM\Registry;
@@ -25,9 +24,9 @@
       $products_id = HTML::sanitize($_GET['aID']);
 
       $Qupdate = $CLICSHOPPING_Archive->db->prepare('update :table_products
-                                              set products_archive = :products_archive
-                                              where products_id = :products_id
-                                            ');
+                                                    set products_archive = :products_archive
+                                                    where products_id = :products_id
+                                                  ');
       $Qupdate->bindInt(':products_archive', 0);
       $Qupdate->bindInt(':products_id', $products_id);
       $Qupdate->execute();
