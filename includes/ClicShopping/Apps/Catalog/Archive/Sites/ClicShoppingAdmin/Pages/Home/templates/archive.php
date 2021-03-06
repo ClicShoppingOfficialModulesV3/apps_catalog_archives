@@ -52,7 +52,7 @@
           </div>
           <div class="col-md-1">
             <?php
-              if (isset($_POST['search']) && !is_null($_POST['search'])) {
+              if (isset($_POST['search']) && !\is_null($_POST['search'])) {
                 echo HTML::button($CLICSHOPPING_Archive->getDef('button_reset'), null, $CLICSHOPPING_Archive->link('Archive&page=' . $page), 'warning');
               }
             ?>
@@ -74,6 +74,8 @@
   <table
     id="table"
     data-toggle="table"
+    data-icons-prefix="bi"
+    data-icons="icons"
     data-id-field="selected"
     data-select-item-name="selected[]"
     data-click-to-select="true"
@@ -101,7 +103,7 @@
     <?php
       $search = '';
 
-      if (isset($_POST['search']) && !is_null($_POST['search'])) {
+      if (isset($_POST['search']) && !\is_null($_POST['search'])) {
         $keywords = HTML::sanitize($_POST['search']);
 
         $Qproducts = $CLICSHOPPING_Archive->db->prepare('select SQL_CALC_FOUND_ROWS p.products_id,
@@ -183,7 +185,7 @@
       <td><?php echo $Qproducts->value('products_model'); ?></td>
       <td><?php echo $Qproducts->value('products_name'); ?></td>
       <?php
-        if (!is_null($Qproducts->value('last_modified'))) {
+        if (!\is_null($Qproducts->value('last_modified'))) {
           echo '<td class="text-md-center">' . DateTime::toShort($Qproducts->value('last_modified')) . '</td>';
         } else {
           echo '<td class="text-md-center"></td>';
