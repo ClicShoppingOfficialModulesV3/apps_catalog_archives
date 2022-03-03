@@ -43,7 +43,7 @@
 
     public function install()
     {
-      $cut_length = strlen('CLICSHOPPING_APP_ARCHIVE_' . $this->code . '_');
+      $cut_length = \strlen('CLICSHOPPING_APP_ARCHIVE_' . $this->code . '_');
 
       foreach ($this->getParameters() as $key) {
         $p = strtolower(substr($key, $cut_length));
@@ -97,7 +97,7 @@
 
       $cut = 'CLICSHOPPING_APP_ARCHIVE_' . $this->code . '_';
 
-      $cut_length = strlen($cut);
+      $cut_length = \strlen($cut);
 
       foreach ($this->getParameters() as $key) {
         $p = strtolower(substr($key, $cut_length));
@@ -105,7 +105,6 @@
         $class = 'ClicShopping\Apps\Catalog\Archive\Module\ClicShoppingAdmin\Config\\' . $this->code . '\Params\\' . $p;
 
         $cfg = new $class($this->code);
-
 
         if (!\defined($key)) {
           $this->app->saveCfgParam($key, $cfg->default, $cfg->title ?? null, $cfg->description ?? null, $cfg->set_func ?? null);
